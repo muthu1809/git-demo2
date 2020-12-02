@@ -2,29 +2,41 @@ package oops.learning;
 
 public class Calculator {
 
+
 	public static void main(String[] args) {
+		int[] a  = {5,10,8,3,2,22}; 
+
+		int[] b = {4,7,6}; 
 		
-		String s1 = "RajarajaChozhan"; 
-		String s2 = "Kumar"; 
-		s1.concat(s2); 
-		System.out.println(s1);
-		System.out.println(s1.contains("xyz")); 
-		System.out.println(s1.endsWith("mar")); 
-		System.out.println(s1.equals(s2)); 
-	System.out.println(s1.indexOf('s')); 
-	System.out.println(s1.lastIndexOf('s')); 
-	s1 = s1.replace('o', 'a'); 
-	System.out.println(s1);
-	String first = s1.substring(0, 5); 
-	System.out.println(first);
-	char[] ch = s1.toCharArray(); 
-	int no = 5; 
-	System.out.println(no+5);
-	String s3 = String.valueOf(no); 
-	System.out.println(s3+5);
+		int cLength = a.length + b.length; 
+
+		int[] c = new int[cLength]; 
+		int j = 0; 
+		for(int i =0;i<c.length;i++)
+			{
+			if(i<a.length)
+			{
+			c[i] = a[i];
+			}
+			else{
+			c[i] = b[j]; 
+			j++; 
+		
+			}
+			}
+		System.out.println("After merging ");
+		System.out.println("----------------------------------");
+		for(int i =0;i<c.length;i++)
+		{
+			System.out.print(c[i] + " | ");
+		}
+		System.out.println();
+		System.out.println("----------------------------------");
+			}
+		
+		}
 
 
+	
+	
 
-	}
-
-}
